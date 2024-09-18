@@ -19,7 +19,7 @@ def patch_requests(url, auth, headers, payload, in_json):
     return patch_response_data
 
 def put_requests(url, auth, headers, payload, in_json):
-    put_response_data = requests.put(url=url, auth=auth, headers=headers, data=json.dump(payload))
+    put_response_data = requests.put(url=url, auth=auth, headers=headers, data=json.dumps(payload))
     if in_json is True:
         return put_response_data.json()
     return put_response_data
